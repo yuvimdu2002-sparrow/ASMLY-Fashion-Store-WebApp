@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fashion Shop - ASMLY</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/fam-logo1.png' ) }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body id="top">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img id="logimg" src="{{ url_for('static', filename='images/fam-logo.jpeg' ) }}" alt="KP icon" title="Krishna Polymers logo">
+                <div class="logotext">
+                    <h2 class="lo">ASMLY</h2>
+                    <p class="lop" style="font-style:oblique;">FASHION STORE</p>
+                </div>
+                <div class="linenv" style="width:25px; cursor:pointer;margin-left:80px; display:none;">
+                    <span
+                        style="display:block; height:3px; background-color:rgb(85, 75, 75);width:100%; margin: 3px 0; border-radius:100px"></span>
+                    <span
+                        style="display:block; height:3px; background-color:rgb(85, 77, 77);width:100%; margin: 3px 0; border-radius:100px"></span>
+                    <span
+                        style="display:block; height:3px; background-color:rgb(78, 69, 69);width:100%; margin: 3px 0; border-radius:100px"></span>
+                </div>
+            </div>
+
+            <ul class=nav-links>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="/product">PRODUCTS</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="javascript:void(0)" id="uppop">CONTACTS</a></li>
+            </ul>
+        </nav>
+        <ul class=nav1 style="display:none;">
+            <li><a href="#"><b>HOME</b></a></li>
+            <li><a href="#about"><b>ABOUT US</b></a></li>
+            <li><a href="/product"><b>PRODUCTS</b></a></li>
+            <li><a href="#gallery"><b>GALLERY</b></a></li>
+            <li><a href="javascript:void(0)" id="upop"><b>CONTACTS</b></a></li>
+        </ul>
+    </header>
+
+    <div class="slider">
+
+        <div class="slide active">
+            <img src="{{ url_for('static', filename='images/main_image/m11.jpeg' ) }}">
+        </div>
+
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/main_image/m12.jpeg' ) }}">
+        </div>
+
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/main_image/m13.jpeg' ) }}">
+        </div>
+
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/main_image/m14.jpeg' ) }}">
+        </div>
+
+        <button class="btn" id="prev">❮</button>
+        <button class="btn" id="next">❯</button>
+
+    </div>
+    <main>
+        <div class="info" style="color: black; height:430px; padding: 60px 102px;">
+            <h2>ASMLY Fashion Store</h2><br>
+            <h3>Hero Section</h3><br>
+            <h4>Wear Confidence. Own the trend</h4><br>
+            <p style="font-size: 14px; font-weight:150;">Discover bold fashion crafted for modern men.
+                From streetwear to premium essentials, ASMLY brings style that speaks before you do.</p><br>
+            <h4>Discover Now</h4>
+            <ul>
+                <li><a href="product.html" onmouseout="this.style.color='black'"
+                        style="color: black; font-size:13px; cursor:pointer;" onmouseover="this.style.color='red'">New
+                        Collection</a></li>
+            </ul><br>
+            <hr style="width: 100%; padding:0.5px 0px; background-color:black"><br>
+            <h3>Short Brand Intro</h3><br>
+            <p style="color:black;font-size: 14px; font-weight:150;">At ASMLY Fashion Store, fashion is more than
+                clothing — it's attitude, identity, and confidence.
+                We create trend-driven styles for men who want a clean, modern, and powerful look every day.</p>
+        </div>
+        <div class="prd" style="background-color:rgb(245, 245, 245);margin:30px 0">
+        <h2 style="padding:15px 105px; font-weight:bolder">Collection Section</h2><hr>
+        <div id="product" class="products"
+            style="padding:20px 20px 50px 20px;display:flex;justify-content:space-between; background-color:rgb(245, 245, 245)">
+            <div class="features" style="font-weight: bold; padding-left:85px">
+                <ul>
+                    <li>Urban Streetwear</li>
+                    <li>Minimal Fashion</li>
+                    <li>Oversized T-Shirts</li>
+                    <li>Premium Denim</li>
+                    <li>Modern Hoodies</li>
+                    <li>Luxury Accessories</li>
+                </ul>
+            </div>
+
+            <div class="features" style="font-weight: bold;padding-right:270px">
+                <h3 style="padding: 15px 0 5px 0;">
+                    <strong>FEATURES OF OUR COLLECTION</h3></strong>
+                <div class="feature-list"
+                    style="display:flex;width:580px; justify-content:space-between ;font-weight:bold">
+                    <ul>
+                        <li>Premium Quality Fabric</li>
+                        <li>Modern Trendy Designs</li>
+                        <li>Comfortable Everyday Wear</li>
+                        <li>Perfect Stylish Fit</li>
+                    </ul>
+
+                    <ul>
+                        <li>Lightweight & Breathable Material</li>
+                        <li>Long Lasting Quality</li>
+                        <li>Affordable Premium Fashion
+                        <li>Unique Modern Collection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div style="background-color:rgb(245, 245, 245)">
+
+        <div id="about" style="background-color: rgb(104, 91, 91); color:white;padding:70px 120px;">
+            <h2 style="color:white"><strong>About
+                Us</strong></h2><br>
+            <div style="line-height:25px">
+                <p>Welcome to ASMLY Fashion Store, where fashion meets confidence and modern style becomes a lifestyle. We are dedicated to bringing you trendy, comfortable, and high-quality fashion that helps you express your individuality with confidence.</p>
+                <p>At ASMLY, we believe fashion is more than clothing — it is a reflection of personality, attitude, and creativity. Our collections are carefully selected to combine modern trends, premium quality, and affordable prices, making stylish fashion accessible for everyone.</p>
+                <p>We continuously update our collections with fresh arrivals to keep you connected with the latest fashion trends. Customer satisfaction is at the heart of everything we do. Our mission is to create a smooth, enjoyable, and reliable shopping experience while helping you discover fashion that truly represents you.</p>
+                <p>ASMLY Fashion Store — Redefining style with confidence, comfort, and creativity.</p>
+            </div>           
+        </div>
+        </div>
+        <div id="gallery" style="background-color: aliceblue; padding:80px 10px">
+            <h3 style=" font-size:25px; text-align:center">Event Gallary</h3>
+            <div style="display:flex;padding: 40px; justify-content:space-around; width:100%">
+                <img src="{{ url_for('static', filename='images/main_image/m11.jpeg' ) }}" alt="Image here" width=250px>
+                <img src="{{ url_for('static', filename='images/main_image/m12.jpeg' ) }}" alt="Image here" width=250px>
+                <img src="{{ url_for('static', filename='images/main_image/m13.jpeg' ) }}" alt="Image here" width=250px>
+                <img src="{{ url_for('static', filename='images/main_image/m14.jpeg' ) }}" alt="Image here" width=250px>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foot" style="display:flex;justify-content:space-around;">
+            <div class="foot1">
+                <div class="logo">
+                    <img style="width:40px ; border-radius:30px" src="{{ url_for('static', filename='images/fam-logo.jpeg' ) }}" alt="KP icon" title="Krishna Polymers logo">
+                    <div class="logotext">
+                        <h2 style="color:rgb(226, 55, 55)">ASMLY</h2>
+                        <h3 style="color:rgb(184, 167, 167);font-style:oblique;">FASHION STORE</h3>
+                    </div>
+                </div>
+                <p><b>ASMLY Fashion Store – </b>Bringing modern style, quality fashion, and confidence together with trendy collections for every occasion.</p>
+                <p><b>Tel:</b> +91 0000-00000</p>
+                <p><b>Mob. :</b> +91 97864 75436</p>
+                <p><b>Email :</b> info@asmly.org</p>
+            </div>
+            <div class=foot2>
+                <div class="links-col" style="padding-top: 10px;">
+                    <h4 style="font-size: 16px;">Quick Links</h4>
+                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="/product">Products</a>
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                    <a class="nav-link" href="javascript:void(0)" id="add-pop">Contact Us</a>
+                </div>
+
+                <div class="social-section" style="padding-right: 80px;">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a class="social-icon" target=_blank
+                            href="https://www.facebook.com/people/Krishna-Polyplast/100059912622065/#"
+                            aria-label="Facebook">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                        </a>
+                        <a class="social-icon" href="https://www.instagram.com/krishnapolyplastindia/" target=_blank
+                            aria-label="Instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
+                        </a>
+                        <a class="social-icon" href="https://x.com/krishnapolyplas/" target=_blank aria-label="Twitter">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                            </svg>
+                        </a>
+                        <a class="social-icon" href="https://www.linkedin.com/company/krishnapolyplast/" target=_blank
+                            aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" /></svg>
+                        </a>
+                        <a class="social-icon" target=_blank; href=""
+                            aria-label="Pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.78 1.27-5.38 1.27-5.38s-.32-.65-.32-1.61c0-1.51.88-2.64 1.97-2.64.93 0 1.38.7 1.38 1.54 0 .93-.6 2.33-.9 3.63-.26 1.08.53 1.96 1.59 1.96 1.9 0 3.18-2.43 3.18-5.3 0-2.19-1.48-3.83-4.15-3.83-3.02 0-4.9 2.26-4.9 4.78 0 .87.26 1.48.67 1.96.19.22.22.31.15.56-.05.18-.16.62-.2.79-.07.26-.28.35-.51.26-1.41-.57-2.07-2.12-2.07-3.85 0-2.86 2.41-6.29 7.17-6.29 3.83 0 6.35 2.77 6.35 5.75 0 3.94-2.18 6.88-5.39 6.88-1.08 0-2.09-.58-2.44-1.24l-.68 2.6c-.25.94-.9 2.12-1.34 2.83.98.3 2 .46 3.07.46 5.52 0 10-4.48 10-10S17.52 2 12 2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+    </footer>
+    <div class="footer-bottom">
+        <span>Copyright &copy; 2025 <a href="#top">ASMLY Fashion Shop</a>. All Rights Reserved.</span>
+        <span>Website by <a href="https://yuvaraj-portfolio-ml.netlify.app/" target=_blank>Yuvi</a></span>
+    </div>
+    <div class="overlay"></div>
+    <div class="pop">
+        <button id="rem"
+            style="border:none; background-color: rgb(201, 83, 83); color:white; padding-bottom:15px;  height:15px; width:30px; top:0.1vh; left:56.29vw; z-index:9; position:absolute ; border:1px solid black">X</button>
+        <div class="contact">
+            <h2 style="text-align: center;">Contact Us</h2>
+            <form id="frm" action="/contact" method="POST">
+                <input type="text" name="name" placeholder="Name" id="phone">
+                <input type="text" name="email" placeholder="Email" id="mail">
+                <input type="text" name="company" placeholder="Company name" id="cm-name">
+                <textarea name="message" placeholder="Message" id="msg"></textarea>
+                <button type="submit" style="color:black">Submit</button>
+                <button type="button" id="close" style="color:black">Cancel</button>
+            </form>
+        </div>
+        <div class="contact2">
+            <h2 style="padding-top: 50px;">ASMLY<span style="font-style:oblique;">FASHION STORE</span></h2><br>
+            <h4 style="line-height:1.3">📍 Plot No.201 Kamarajar Nagar, Vadapalani, Madurai - 625001</h4><br>
+            <p>📞 +91 0000-00000 | +91 97864 75436</p><br>
+            <p>✉️ Info@asmly.org</p>
+        </div>
+    </div>
+    <div id="success-msg">
+        <h2>Message Sent </h2><br>
+        <p>Thank you for contacting us.</p><br>
+        <button onclick="closeMsg()">OK</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js' ) }}"> </script>
+</body>
+
+</html>
+

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product-ASMLY</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/fam-logo1.png' ) }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .sub1 img {
+            height: 26vh;
+            width: 22vw;
+            border: 5px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .image {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .sub1 button {
+            height: 25px;
+            width: 10vw;
+            border-radius: 10px;
+            transition: 0.5s;
+            margin-top: 15px;
+        }
+
+        .sub1 button:hover {
+            transform: scale(1.1);
+            background-color: white;
+        }
+
+        .sub1 h3 {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .sub2 {
+            height: auto;
+            width: 97.5vw;
+            background-color: rgb(241, 234, 234);
+            margin: 10px;
+            padding: 10px 10px 30px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .sub1 a {
+            padding-left: 10px;
+            color: aliceblue;
+        }
+
+        @media screen and (max-width: 430px) {
+
+            .sub2 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin: 0 10px 0 5px;
+            }
+
+            .sub1 img {
+                width: 100%;
+                height: 150px;
+            }
+
+            .sub1 h3 {
+                padding-bottom: 10px;
+            }
+
+            .sub1 button {
+                height: 20px !important;
+                width: 70px !important;
+                border-radius: 20px;
+                margin-top: 10px;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img id="logimg" src="{{ url_for('static', filename='images/fam-logo.jpeg' ) }}" alt="KP icon"
+                    title="Krishna Polymers logo">
+                <div class="logotext">
+                    <h2 class="lo">ASMLY</h2>
+                    <p class="lop" style="font-style:oblique;">FASHION STORE</p>
+                </div>
+                <div class="linenv" style="width:25px; cursor:pointer;margin-left:80px; display:none;">
+                    <span
+                        style="display:block; height:3px; background-color:rgb(85, 75, 75);width:100%; margin: 3px 0; border-radius:100px"></span>
+                    <span
+                        style="display:block; height:3px; background-color:rgb(85, 77, 77);width:100%; margin: 3px 0; border-radius:100px"></span>
+                    <span
+                        style="display:block; height:3px; background-color:rgb(78, 69, 69);width:100%; margin: 3px 0; border-radius:100px"></span>
+                </div>
+            </div>
+
+            <ul class=nav-links>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/#about">ABOUT US</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="/#gallery">GALLERY</a></li>
+                <li><a href="javascript:void(0)" id="uppop">CONTACTS</a></li>
+            </ul>
+        </nav>
+        <ul class=nav1 style="display:none;">
+            <li><a href="/"><b>HOME</b></a></li>
+            <li><a href="/#about"><b>ABOUT US</b></a></li>
+            <li><a href="#"><b>PRODUCTS</b></a></li>
+            <li><a href="/#gallery"><b>GALLERY</b></a></li>
+            <li><a href="javascript:void(0)" id="upop"><b>CONTACTS</b></a></li>
+        </ul>
+    </header>
+
+    <section id="pd-image" style="background-color:white;padding-bottom:30px; width:100%; ">
+        <h1
+            style="text-align: center;margin-top:100px; padding:10px; background-color:rgb(241, 234, 234);text-shadow:0 3px rgb(236, 230, 230); font-size:28px; border:1px solid rgb(228, 210, 210)">
+            Products</h1>
+        <hr style="width:100% ;border: 6px solid white;">
+        <div class=sub1>
+            <h3>Urban Streetwear</h3>
+            <div class=sub2>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/u1.jpg' ) }}">
+                    <button onclick="addToCart('Urban Streetwear')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/u2.jpg' ) }}">
+                    <button onclick="addToCart('Urban Streetwear')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/u3.jpg' ) }}">
+                    <button onclick="addToCart('Urban Streetwear')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/u4.jpg' ) }}">
+                    <button onclick="addToCart('Urban Streetwear')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/u5.jpg' ) }}">
+                    <button onclick="addToCart('Urban Streetwear')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/u6.jpg' ) }}">
+                    <button onclick="addToCart('Urban Streetwear')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/u7.jpg' ) }}">
+                    <button onclick="addToCart('Urban Streetwear')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/u8.jpg' ) }}">
+                    <button onclick="addToCart('Urban Streetwear')">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class=sub1>
+            <h3>Minimal Fashion</h3>
+            <div class=sub2>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/m1.jpg' ) }}">
+                    <button onclick="addToCart('Minimal Fashion')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/m2.jpg' ) }}">
+                    <button onclick="addToCart('Minimal Fashion')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/m3.jpg' ) }}">
+                    <button onclick="addToCart('Minimal Fashion')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/m4.jpg' ) }}">
+                    <button onclick="addToCart('Minimal Fashion')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/m5.jpg' ) }}">
+                    <button onclick="addToCart('Minimal Fashion')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/m6.jpg' ) }}">
+                    <button onclick="addToCart('Minimal Fashion')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/m7.jpg' ) }}">
+                    <button onclick="addToCart('Minimal Fashion')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/m8.jpg' ) }}">
+                    <button onclick="addToCart('Minimal Fashion')">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class=sub1>
+            <h3>Oversized T-Shirts</h3>
+            <div class=sub2>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/o1.jpg' ) }}">
+                    <button onclick="addToCart('Oversized T-Shirts')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/o2.jpg' ) }}">
+                    <button onclick="addToCart('Oversized T-Shirts')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/o3.jpg' ) }}">
+                    <button onclick="addToCart('Oversized T-Shirts')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/o4.jpg' ) }}">
+                    <button onclick="addToCart('Oversized T-Shirts')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/o5.jpg' ) }}">
+                    <button onclick="addToCart('Oversized T-Shirts')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/o6.jpg' ) }}">
+                    <button onclick="addToCart('Oversized T-Shirts')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/o7.jpg' ) }}">
+                    <button onclick="addToCart('Oversized T-Shirts')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/o8.jpg' ) }}">
+                    <button onclick="addToCart('Oversized T-Shirts')">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class=sub1>
+            <h3>Premium Denim</h3>
+            <div class=sub2>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/d1.jpg' ) }}">
+                    <button onclick="addToCart('Premium Denim')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/d2.jpg' ) }}">
+                    <button onclick="addToCart('Premium Denim')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/d3.jpg' ) }}">
+                    <button onclick="addToCart('Premium Denim')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/d4.jpg' ) }}">
+                    <button onclick="addToCart('Premium Denim')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/d5.jpg' ) }}">
+                    <button onclick="addToCart('Premium Denim')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/d6.jpg' ) }}">
+                    <button onclick="addToCart('Premium Denim')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/d7.jpg' ) }}">
+                    <button onclick="addToCart('Premium Denim')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/d8.jpg' ) }}">
+                    <button onclick="addToCart('Premium Denim')">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class=sub1>
+            <h3>Modern Hoodies</h3>
+            <div class=sub2>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/h1.jpg' ) }}">
+                    <button onclick="addToCart('Modern Hoodies')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/h2.jpg' ) }}">
+                    <button onclick="addToCart('Modern Hoodies')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/h3.jpg' ) }}">
+                    <button onclick="addToCart('Modern Hoodies')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/h4.jpg' ) }}">
+                    <button onclick="addToCart('Modern Hoodies')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/h5.jpg' ) }}">
+                    <button onclick="addToCart('Modern Hoodies')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/h6.jpg' ) }}">
+                    <button onclick="addToCart('Modern Hoodies')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/h7.jpg' ) }}">
+                    <button onclick="addToCart('Modern Hoodies')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/h8.jpg' ) }}">
+                    <button onclick="addToCart('Modern Hoodies')">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class=sub1>
+            <h3>Luxury Accessories</h3>
+            <div class=sub2>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/l1.jpg' ) }}">
+                    <button onclick="addToCart('Luxury Accessories')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/l2.jpg' ) }}">
+                    <button onclick="addToCart('Luxury Accessories')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/l3.jpg' ) }}">
+                    <button onclick="addToCart('Luxury Accessories')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/l4.jpg' ) }}">
+                    <button onclick="addToCart('Luxury Accessories')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/l5.jpg' ) }}">
+                    <button onclick="addToCart('Luxury Accessories')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/l6.jpg' ) }}">
+                    <button onclick="addToCart('Luxury Accessories')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/l7.jpg' ) }}">
+                    <button onclick="addToCart('Luxury Accessories')">Add to cart</button>
+                </div>
+                <div class=image>
+                    <img src="{{ url_for('static', filename='images/products/l8.jpg' ) }}">
+                    <button onclick="addToCart('Luxury Accessories')">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="foot" style="display:flex;justify-content:space-around;">
+            <div class="foot1">
+                <div class="logo">
+                    <img style="width:40px ; border-radius:30px"
+                        src="{{ url_for('static', filename='images/fam-logo.jpeg' ) }}" alt="KP icon"
+                        title="Krishna Polymers logo">
+                    <div class="logotext">
+                        <h2 style="color:rgb(226, 55, 55)">ASMLY</h2>
+                        <h3 style="color:rgb(184, 167, 167);font-style:oblique;">FASHION STORE</h3>
+                    </div>
+                </div>
+                <p><b>ASMLY Fashion Store – </b>Bringing modern style, quality fashion, and confidence together with
+                    trendy collections for every occasion.</p>
+                <p><b>Tel:</b> +91 0000-00000</p>
+                <p><b>Mob. :</b> +91 97864 75436</p>
+                <p><b>Email :</b> info@asmly.org</p>
+            </div>
+            <div class=foot2>
+                <div class="links-col" style="padding-top: 10px;">
+                    <h4 style="font-size: 16px;">Quick Links</h4>
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/#about">About</a>
+                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="/#gallery">Gallery</a>
+                    <a class="nav-link" href="javascript:void(0)" id="add-pop">Contact Us</a>
+                </div>
+
+                <div class="social-section" style="padding-right: 80px;">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a class="social-icon" target=_blank
+                            href="https://www.facebook.com/people/Krishna-Polyplast/100059912622065/#"
+                            aria-label="Facebook">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                        </a>
+                        <a class="social-icon" href="https://www.instagram.com/krishnapolyplastindia/" target=_blank
+                            aria-label="Instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
+                        </a>
+                        <a class="social-icon" href="https://x.com/krishnapolyplas/" target=_blank aria-label="Twitter">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                            </svg>
+                        </a>
+                        <a class="social-icon" href="https://www.linkedin.com/company/krishnapolyplast/" target=_blank
+                            aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" /></svg>
+                        </a>
+                        <a class="social-icon" target=_blank; href="" aria-label="Pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.78 1.27-5.38 1.27-5.38s-.32-.65-.32-1.61c0-1.51.88-2.64 1.97-2.64.93 0 1.38.7 1.38 1.54 0 .93-.6 2.33-.9 3.63-.26 1.08.53 1.96 1.59 1.96 1.9 0 3.18-2.43 3.18-5.3 0-2.19-1.48-3.83-4.15-3.83-3.02 0-4.9 2.26-4.9 4.78 0 .87.26 1.48.67 1.96.19.22.22.31.15.56-.05.18-.16.62-.2.79-.07.26-.28.35-.51.26-1.41-.57-2.07-2.12-2.07-3.85 0-2.86 2.41-6.29 7.17-6.29 3.83 0 6.35 2.77 6.35 5.75 0 3.94-2.18 6.88-5.39 6.88-1.08 0-2.09-.58-2.44-1.24l-.68 2.6c-.25.94-.9 2.12-1.34 2.83.98.3 2 .46 3.07.46 5.52 0 10-4.48 10-10S17.52 2 12 2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+    </footer>
+    <div class="footer-bottom">
+        <span>Copyright &copy; 2025 <a href="#top">ASMLY Fashion Shop</a>. All Rights Reserved.</span>
+        <span>Website by <a href="https://yuvaraj-portfolio-ml.netlify.app/" target=_blank>Yuvi</a></span>
+    </div>
+    <div class="overlay"></div>
+    <div class="pop">
+        <button id="rem"
+            style="border:none; background-color: rgb(201, 83, 83); color:white; padding-bottom:15px;  height:15px; width:30px; top:0.1vh; left:56.29vw; z-index:9; position:absolute ; border:1px solid black">X</button>
+        <div class="contact">
+            <h2 style="text-align: center;">Contact Us</h2>
+            <form id="frm" action="/contact" method="POST">
+                <input type="text" name="name" placeholder="Name" id="phone">
+                <input type="text" name="email" placeholder="Email" id="mail">
+                <input type="text" name="company" placeholder="Company name" id="cm-name">
+                <textarea name="message" placeholder="Message" id="msg"></textarea>
+                <button type="submit" style="color:black">Submit</button>
+                <button type="button" id="close" style="color:black">Cancel</button>
+            </form>
+        </div>
+        <div class="contact2">
+            <h2 style="padding-top: 50px;">ASMLY<span style="font-style:oblique;">FASHION STORE</span></h2><br>
+            <h4 style="line-height:1.3">📍 Plot No.201 Kamarajar Nagar, Vadapalani, Madurai - 625001</h4><br>
+            <p>📞 +91 0000-00000 | +91 97864 75436</p><br>
+            <p>✉️ Info@asmly.org</p>
+        </div>
+    </div>
+    <div id="success-msg">
+        <h2>Message Sent </h2><br>
+        <p>Thank you for contacting us.</p><br>
+        <button onclick="closeMsg()">OK</button>
+    </div>
+
+    <script>
+        var overlay = document.querySelector(".overlay")
+        var pop = document.querySelector(".pop")
+        var cont = document.querySelector(".contact2")
+        var adpop = document.getElementById("add-pop")
+        var popup = document.getElementById("uppop")
+        var remo = document.getElementById("rem")
+        var form = document.getElementById("frm")
+        var close = document.getElementById("close")
+        var msg = document.getElementById("success-msg")
+        var nav = document.querySelector(".navbar")
+        var poup = document.getElementById("upop")
+
+
+        function closeMsg() {
+            document.getElementById("success-msg").style.display = "none";
+            overlay.style.display = "none"
+        }
+
+
+        adpop.addEventListener("click", function () {
+            overlay.style.display = "block"
+            pop.style.display = "block"
+            cont.style.display = "block"
+            window.scrollTo({
+                top: 0,
+                behaviour: "smooth"
+            })
+        })
+
+        remo.addEventListener("click", function () {
+            overlay.style.display = "none"
+            pop.style.display = "none"
+            cont.style.display = "none"
+        })
+        var liv = document.querySelector(".linenv")
+        var link = document.querySelector(".nav1")
+        liv.addEventListener("click", function () {
+            link.classList.toggle("show");
+            window.scrollTo({
+                top: 0,
+                behaviour: "smooth",
+            })
+        })
+
+
+        window.addEventListener("scroll", function () {
+
+            let navbar = document.querySelector(".navbar");
+            let logotext = document.querySelector(".logotext");
+            let logimg = document.getElementById("logimg")
+            let logo = document.querySelector(".lo")
+            let l1 = document.querySelector(".lop")
+
+            if (window.scrollY > 50) {
+                navbar.style.height = "60px"
+                logotext.style.display = "flex"
+                logimg.style.width = "45px"
+                logo.style.fontSize = "20px"
+                l1.style.padding = "1px 5px"
+                liv.style.margin = "4px 0 0 30px"
+            }
+            else {
+                logo.style.padding = ""
+                navbar.style.height = ""
+                logotext.style.display = ""
+                logimg.style.width = ""
+                l1.style.padding = ""
+                liv.style.margin = "0 0 0 80px"
+            }
+        })
+
+        poup.addEventListener("click", function () {
+
+            overlay.style.display = "block"
+            pop.style.display = "block"
+            cont.style.display = "block"
+        })
+
+        popup.addEventListener("click", function () {
+
+            overlay.style.display = "block"
+            pop.style.display = "block"
+            cont.style.display = "block"
+            nav.style.zIndex = "0"
+        })
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault()
+            fetch("/contact", {
+                method: "POST",
+                body: new FormData(form)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    overlay.style.display = "block"
+                    pop.style.display = "none"
+                    msg.style.display = "block"
+                    form.reset()
+                })
+        })
+
+
+        close.addEventListener("click", function (event) {
+            event.preventDefault()
+            overlay.style.display = "none"
+            pop.style.display = "none"
+        })
+
+        function addToCart(name){
+
+            fetch("/addcart",{
+                method:"POST",
+        
+                headers:{
+                    "Content-Type":"application/json"
+                },
+        
+                body:JSON.stringify({
+                    product_name:name
+                })
+            })
+        
+            .then(res => res.json())
+        
+            .then(data => {
+                overlay.style.display = "block"
+                msg.style.display = "block"
+                msg.querySelector("h2").innerText="Added To Cart"
+                msg.querySelector("p").innerText=name + " added Successfully"
+            })
+        }
+
+    </script>
+</body>
+
+</html>
