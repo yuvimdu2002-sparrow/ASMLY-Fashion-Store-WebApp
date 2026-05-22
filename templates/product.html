@@ -567,6 +567,8 @@
                     overlay.style.display = "block"
                     pop.style.display = "none"
                     msg.style.display = "block"
+                    msg.querySelector("h2").innerText="Message Sent"
+                    msg.querySelector("p").innerText="Thank you for contacting us..."
                     form.reset()
                 })
         })
@@ -598,7 +600,7 @@
                 overlay.style.display = "block"
                 msg.style.display = "block"
                 msg.querySelector("h2").innerText="Added To Cart"
-                msg.querySelector("p").innerText=name + " added Successfully"
+                msg.querySelector("p").innerText=name + " added Successfully..."
             })
         }
 
